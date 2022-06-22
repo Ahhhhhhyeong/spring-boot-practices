@@ -1,11 +1,9 @@
 package ex01;
 
-import java.nio.channels.AcceptPendingException;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -19,15 +17,9 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class HelloSpringBootApplication {
-	
-	@Bean
-	public ApplicationRunner applicationRunner() {
-		return new MyComponent();
-	}
-	
-	
 	public static void main(String[] args) {
-		/** SpringApplication.run 안에서 일어나는 5가지의 작업(bootstrap)
+		/** 
+		 * SpringApplication.run 안에서 일어나는 5가지의 작업(bootstrap) 
 		 * 
 		 * 1. 애플리케이션 컨텍스트(Application Context, spring Container) 생성
 		 * 2. 만약 웹 애플리케이션이면, 애플리케이션의 타입을 결정(지금은 웹이 아니기에 건너뜀)
